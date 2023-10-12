@@ -16,12 +16,12 @@ defineProps<Props>()
     <!-- Head -->
     <circle v-if="wrongLettersCount >= 1" cx="140" cy="70" r="20" />
     <!-- Body -->
-    <line v-if="wrongLettersCount >= 2" x1="140" y1="90" x2="140" y2="150" />
+    <line v-else-if="wrongLettersCount >= 2" x1="140" y1="90" x2="140" y2="150" />
     <!-- Arms -->
-    <line v-if="wrongLettersCount >= 3" x1="140" y1="120" x2="120" y2="100" />
-    <line v-if="wrongLettersCount >= 4" x1="140" y1="120" x2="160" y2="100" />
+    <line v-else-if="wrongLettersCount >= 3" x1="140" y1="120" x2="120" y2="100" />
+    <line v-else-if="wrongLettersCount >= 4" x1="140" y1="120" x2="160" y2="100" />
     <!-- Legs -->
-    <line v-if="wrongLettersCount >= 5" x1="140" y1="150" x2="120" y2="180" />
-    <line v-if="wrongLettersCount >= 6" x1="140" y1="150" x2="160" y2="180" />
+    <line v-else-if="wrongLettersCount >= 5" x1="140" y1="150" x2="120" y2="180" />
+    <line v-else-if="wrongLettersCount >= 6" x1="140" y1="150" x2="160" y2="180" />
   </svg>
 </template>
